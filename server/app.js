@@ -6,6 +6,15 @@ const upload = multer({ dest: './public/images' })
 const PORT = process.env.PORT || 3000
 
 app.use(cors())
+
+mongoose.connect('mongodb://localhost:27017/ghost_image', { useNewUrlParser : true })
+.then(() => {
+    console.log(`Connect to mongoose database`)
+})
+.catch(err => {
+    console.log(err)
+})
+
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
 
