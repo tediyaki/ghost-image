@@ -47,9 +47,7 @@ export default {
 </script>
 
 <style>
-    .content {
-        color: white;
-        text-align: center;
-    }
+
+    
 </style>
  
