@@ -1,8 +1,5 @@
 <template>
   <div>
-    <h1>{{ message }}</h1>
-   
-
     <formImage></formImage>
     <showImage></showImage>
   </div>
@@ -15,7 +12,7 @@ import showImage from '../components/home.vue'
 export default {
   data() {
     return {
-      message: 'Hello world',
+      message: '',
     };
   },
   components: {
