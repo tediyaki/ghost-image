@@ -1,11 +1,16 @@
 <template>
     <div class="content">
-        <div class="grid" v-for="image in images">
+        <div class="grid" v-for="(image, index) in images">
             <figure class="effect-lily">
                 <img v-bind:src="image.link" alt="img12"/>
                 <figcaption>
                     <div>
-                        <h2> {{ image.title }} <span>Lily</span></h2>
+                        <a  v-bind:href="'https://twitter.com/intent/tweet?text='+image.link"  class="twitter-share-button" data-hashtags="Gambar Seram">Tweet</a>
+                        <div class="fb-share-button" 
+                            :data-href="image.link"
+                            data-layout="button_count">
+                        </div>
+                        <h2> {{ image.title }} </h2>
                     </div>
                 </figcaption>           
             </figure>
@@ -23,10 +28,12 @@ export default {
     },
 
     methods: {
-        showImage () {
-            axios.get('http://localhost:3000/ghost/image')
+        showImage() {
+            axios.get('http://localhost:3000/ghost/')
             .then(({data})=> {
-                this.images = data
+                console.log("=============")
+                this.images = data.data
+                console.log(this.images)
             })
             .catch((err)=> {
                 console.log(err)
@@ -39,7 +46,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style scoped>
+    h2 {
+        color: white;
+    }
 </style>
  
