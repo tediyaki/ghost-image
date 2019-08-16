@@ -3,7 +3,7 @@
 <title>GHOST IMAGE</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <style>
     .grid {
         position: relative;
@@ -1369,75 +1369,45 @@
 </style>
 <link href='https://fonts.googleapis.com/css?family=Raleway:400,800,300' rel='stylesheet' type='text/css'>
 
-<header>
-    <h1>Ghost Image</h1>
-</header>
-
 <body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Ghost Image</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </nav>
+
     <div id="app">
     </div>
-    <div class="content">
-        <div class="grid">
-            <figure class="effect-layla">
-                <img src="https://tympanus.net/Development/HoverEffectIdeas/img/6.jpg" alt="img06" />
-                <figcaption>
-                    <h2>Crazy <span>Layla</span></h2>
-                    <p>When Layla appears, she brings an eternal summer along.</p>
-                    <a href="#">View more</a>
-                </figcaption>
-            </figure>
-            <figure class="effect-layla">
-                <img src="https://tympanus.net/Development/HoverEffectIdeas/img/3.jpg" alt="img03" />
-                <figcaption>
-                    <h2>Crazy <span>Layla</span></h2>
-                    <p>When Layla appears, she brings an eternal summer along.</p>
-                    <a href="#">View more</a>
-                </figcaption>
-            </figure>
-        </div>
-        <div class="grid">
-            <figure class="effect-zoe">
-                <img src="https://tympanus.net/Development/HoverEffectIdeas/img/25.jpg" alt="img25" />
-                <figcaption>
-                    <h2>Creative <span>Zoe</span></h2>
-                    <p class="icon-links">
-                        <a href="#"><span class="icon-heart"></span></a>
-                        <a href="#"><span class="icon-eye"></span></a>
-                        <a href="#"><span class="icon-paper-clip"></span></a>
-                    </p>
-                    <p class="description">Zoe never had the patience of her sisters. She deliberately punched the
-                        bear in
-                        his face.</p>
-                </figcaption>
-            </figure>
-            <figure class="effect-zoe">
-                <img src="https://tympanus.net/Development/HoverEffectIdeas/img/26.jpg" alt="img26" />
-                <figcaption>
-                    <h2>Creative <span>Zoe</span></h2>
-                    <p class="icon-links">
-                        <a href="#"><span class="icon-heart"></span></a>
-                        <a href="#"><span class="icon-eye"></span></a>
-                        <a href="#"><span class="icon-paper-clip"></span></a>
-                    </p>
-                    <p class="description">Zoe never had the patience of her sisters. She deliberately punched the
-                        bear in
-                        his face.</p>
-                </figcaption>
-            </figure>
-        </div>
-        <!-- <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="VoidCanvas">Tweet</a> -->
-        <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https'; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = p + '://platform.twitter.com/widgets.js'; fjs.parentNode.insertBefore(js, fjs); } }(document, 'script', 'twitter-wjs')</script>
-        </div>
-        <script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+
+    <script>
+        ! function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0],
+                p = /^http:/.test(d.location) ? 'http' : 'https';
+            if (!d.getElementById(id)) {
+                js = d.createElement(s);
+                js.id = id;
+                js.src = p + '://platform.twitter.com/widgets.js';
+                fjs.parentNode.insertBefore(js, fjs);
+            }
+        }(document, 'script', 'twitter-wjs')
+    </script>
+
+    <script>
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s);
+            js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    </script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="./src/main.js"></script>
-       
+
 </body>
 
 </html>
