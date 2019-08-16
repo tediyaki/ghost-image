@@ -7,7 +7,7 @@ const ghostRouter = require('./router/')
 
 app.use(cors())
 
-mongoose.connect('mongodb://localhost:27017/ghost_image', { useNewUrlParser : true })
+mongoose.connect('mongodb+srv://ghostAdmin:mypassword@mflix-w8mhl.mongodb.net/ghost_image?retryWrites=true&w=majority', { useNewUrlParser : true })
 .then(() => {
     console.log(`Connect to mongoose database`)
 })
