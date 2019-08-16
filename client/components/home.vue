@@ -1,5 +1,5 @@
 <template>
-    <div class="content"
+    <div class="content">
         <div class="grid" v-for="(image, index) in images">
             <figure class="effect-lily">
                 <img v-bind:src="image.link" alt="img12"/>
