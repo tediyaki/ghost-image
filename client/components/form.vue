@@ -1,5 +1,5 @@
 <template>
-    <form @submit="sendForm">
+    <form @submit.prevent="sendForm">
         <label for="title" v-model="title">Title</label><br>
         <input v-model="title" type="text" name="title" required><br>
         <label for="file">File</label><br>
@@ -12,31 +12,25 @@
     export default {
         data() {
             return {
-                title: '',
-                file: ''
+                file: '',
+                title: ''
             };
         },
         methods: {
             imageUpload() {
                 this.file = this.$refs.file.files[0]
-                console.log(this.file)
             },
             sendForm() {
                 const formData = new FormData()
-                formData.append('title', this.title)
-                formData.append('file', this.file);
-                axios.post( '/image',
-                    formData,
-                    {
-                        headers: {
-                            'Content-Type': 'multipart/form-data'
-                        }
-                    }
+                formData.set('title', this.title)
+                formData.set('image', this.file);
+                axios.post( 'http://localhost:3000/ghost/image',
+                    formData
                 ).then(function(){
-                    console.log('SUCCESS!!');
+                    console.log('message successfully uploaded!');
                 })
-                .catch(function(){
-                    console.log('FAILURE!!');
+                .catch(err => {
+                    console.log(err)
                 });
             }
         }

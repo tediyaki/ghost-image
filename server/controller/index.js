@@ -8,6 +8,14 @@ class GhostController {
         })
         .catch(next)
     }
+
+    static postImage (req, res, next) {
+        Ghost.create({title: req.body.title, link: req.file.cloudStoragePublicUrl})
+            .then(ghost => {
+                res.status(201).json(ghost)
+            })
+            .catch(next)
+    }
 }
 
 module.exports = GhostController
