@@ -1,7 +1,10 @@
 <template>
   <div>
     <h1>{{ message }}</h1>
+   
+
     <formImage></formImage>
+    <showImage></showImage>
   </div>
 </template>
 
@@ -16,7 +19,8 @@ export default {
     };
   },
   components: {
-    formImage
+    formImage,
+    showImage
   }
 };
 </script>
