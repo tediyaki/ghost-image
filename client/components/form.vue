@@ -1,5 +1,5 @@
 <template>
-    <form @submit.prevent="sendForm">
+    <form id="submit-file" @submit.prevent="sendForm">
         <label for="title" v-model="title">Title</label><br>
         <input v-model="title" type="text" name="title" required><br>
         <label for="file">File</label><br>
@@ -39,4 +39,27 @@
 
 <style>
 
+    #submit-file {
+        text-align: center;
+        margin: 20px;
+        padding: 20px;
+    }
+
+    #submit-file label, #submit-file input {
+        margin: 15px;
+    }
+
+    #submit-file label {
+        font-size: 25px;
+    }
+
+    #submit-file input[type="text"] {
+        width: 290px;
+    }
+
+    #submit-file input[type="submit"] {
+        width: 90px;
+        border-radius: 10px;
+        font-weight: bold
+    }
 </style>

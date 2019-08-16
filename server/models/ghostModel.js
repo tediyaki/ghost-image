@@ -8,6 +8,8 @@ const GhostSchema = new Schema({
         type: Number,
         default: 0
     }
+}, {
+    timestamps: true
 })
 
 module.exports = mongoose.model('Ghost', GhostSchema)
