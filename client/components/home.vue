@@ -5,7 +5,7 @@
                 <img v-bind:src="image.link" alt="img12"/>
                 <figcaption>
                     <div>
-                        <a  v-bind:href="'https://twitter.com/intent/tweet?text='+image.link"  class="twitter-share-button" data-hashtags="Gambar Seram">Tweet</a>
+                        <a  v-bind:href="'https://twitter.com/intent/tweet?text='+image.link"  class="w-inline-block social-share-btn tw" data-size="large">Tweet</a>
                         <div class="fb-share-button" 
                             :data-href="image.link"
                             data-layout="button_count">
