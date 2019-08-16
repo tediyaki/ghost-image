@@ -3,7 +3,7 @@ const Ghost = require('../models/ghostModel')
 class GhostController {
     static findAll (req, res, next) {
         console.log('get ghost')
-        Ghost.find()
+        Ghost.find().sort({_id: -1})
         .then(data => {
             console.log(data);
             
