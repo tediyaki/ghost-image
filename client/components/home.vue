@@ -11,8 +11,6 @@
                         </div> <br>
                         <a  v-bind:href="'https://twitter.com/intent/tweet?text='+image.link"  class="twitter-share-button" data-hashtags="Gambar Seram">Tweet</a>
                         <h2> {{ image.title }} </h2>
-
-
                     </div>
                 </figcaption>           
             </figure>
