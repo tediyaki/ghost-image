@@ -13,6 +13,7 @@
                         </div>
                         <h2> {{ image.title }} </h2>
 
+
                     </div>
                 </figcaption>           
             </figure>
