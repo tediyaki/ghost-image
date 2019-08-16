@@ -1,5 +1,5 @@
 <template>
-    <div class="content">
+    <div class="content"
         <div class="grid" v-for="(image, index) in images">
             <figure class="effect-lily">
                 <img v-bind:src="image.link" alt="img12"/>
@@ -11,8 +11,6 @@
                         </div> <br>
                         <a  v-bind:href="'https://twitter.com/intent/tweet?text='+image.link"  class="twitter-share-button" data-hashtags="Gambar Seram">Tweet</a>
                         <h2> {{ image.title }} </h2>
-
-
                     </div>
                 </figcaption>           
             </figure>
@@ -48,9 +46,8 @@ export default {
 }
 </script>
 
-<style scoped>
-    h2 {
-        color: white;
-    }
+<style>
+
+    
 </style>
  
